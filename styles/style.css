@@ -12,3 +12,8 @@ p {
 a:hover {
     color: blue;
 } 
+}
+
+.face {
+    width: 300px;
+}
