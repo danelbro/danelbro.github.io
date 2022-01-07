@@ -19,7 +19,7 @@ a:hover {
     color: blue;
 }
 
-.face {
+#face {
     height: auto;
-    width: 150px;
+    width: 500px;
 }
