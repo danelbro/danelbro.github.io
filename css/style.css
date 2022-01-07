@@ -1,15 +1,14 @@
 html {
-    font-family: Helvetica, sans-serif;
     background-color: white;
 }
 
 .intro {
+    font-family: Helvetica, sans-serif;
     color: black;
     text-align: left;
 }
 
 h1 {
-    font-family: Georgia, serif;
     font-size: 20;
 }
 
@@ -24,4 +23,8 @@ a:hover {
 #face {
     height: auto;
     width: 300px;
+}
+ 
+#name {
+    font-family: Georgia, serif;
 }
