@@ -1,9 +1,10 @@
 html {
     font-family: "Nunito Sans", sans-serif;
+    background-color: white;
 }
 
-h1,
-p {
+.intro {
+    color: black;
     text-align: left;
 }
 
