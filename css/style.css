@@ -2,9 +2,13 @@ html {
     font-family: "Nunito Sans", sans-serif;
 }
 
+h1,
+p {
+    text-align: left;
+}
+
 h1 {
     font-size: 20;
-    text-align: center;
 }
 
 p {
@@ -17,5 +21,5 @@ a:hover {
 
 .face {
     height: auto;
-    width: 75px;
+    width: 150px;
 }
