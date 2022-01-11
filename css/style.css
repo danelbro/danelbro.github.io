@@ -3,9 +3,13 @@ html {
 }
 
 .intro {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Nunito Sans', Helvetica, sans-serif;
     color: black;
     text-align: left;
+}
+
+.header {
+    font-family: 'EB Garamond', Garamond, serif;
 }
 
 h1 {
@@ -23,8 +27,4 @@ a:hover {
 #face {
     height: auto;
     width: 300px;
-}
- 
-#name {
-    font-family: Georgia, serif;
 }
