@@ -17,90 +17,9 @@
     --nord15: #B48EAD;
 }
 
-html {
-    background-color: var(--nord6);
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    margin: 0px;
-    min-height: 100vh;
-}
-
-.header,
-.content,
-.footer {
-    align-items: stretch;
-}
-
-.header {
-    display: flex;
-    flex-direction: column;
-    flex: 0;
-    min-width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.titlebox {
-    flex: 0;
-    margin: auto;
-}
-
-.titlebox a {
-    text-decoration: none;
-}
-
-.title {
-    font-family: 'EB Garamond', Garamond, serif;
-    font-weight: 700;
-    color: var(--nord0);
-    font-size: 2.5em;
-    text-align: center;
-}
-
-.sitelinks,
-.content,
-.footer {
-    display: flex;
-}
-
-.sitelinks {
-    align-items: space-between;
-    flex: 0;
-    min-width: 75%;
-    font-family: 'EB Garamond', Garamond, serif;
-    font-size: 1em;
-    text-align: center;
-    background: var(--nord8);
-    padding: 0.3em;
-    border-radius: 0.75em;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.sitelinks div {
-    flex: 1 0;
-}
-
-.mainlink {
-    padding: 1%;
-    border-radius: 10px;
-    font-weight: 700;
-}
-
-@media (max-width: 475px) {
-    .sitelinks {
-        flex-direction: column;
-        min-width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-between;
-        min-height: 7em;
-    }
+/* Deal with common link properties here since they don't fit nicely elsewhere */
+a {
+    transition: color 0.5s
 }
 
 a:link {
@@ -111,31 +30,108 @@ a:visited {
     color: var(--nord0);
 }
 
-a {
-    transition: color 0.5s
-}
-
-.mainlink a {
-    text-decoration: none;
-}
-
-.mainlink a:hover {
-    color: var(--nord10)
-}
-
-.content {
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    flex: 3;
+body,
+.header,
+.sitelinks,
+.content,
+.footer {
     display: flex;
 }
 
+body {
+    flex-flow: column nowrap;
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    background: var(--nord6);
+    align-items: center;
+    justify-content: stretch;
+}
+
+/* page masthead */
+.header {
+    flex-flow: column nowrap;
+    min-width: 75%;
+    margin: 0px auto;
+}
+
+.titlebox {
+    margin: auto;
+}
+
+.titlebox a {
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'EB Garamond', Garamond, serif;
+    font-weight: bold;
+    color: var(--nord0);
+    font-size: 56px;
+}
+
+.sitelinks {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+    background: var(--nord8);
+    padding: 0.1% 1%;
+    border-radius: 0.75em;
+    margin: auto;
+}
+
+.mainlink {
+    font-family: 'EB Garamond', Garamond, serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+a:hover.mainlink {
+    color: var(--nord10)
+}
+
+/* main content */
+.content {
+    width: 75%;
+    margin: 2% auto;
+    flex: 1;
+}
+
+/* first do general paragraph styles */
+.content h2 {
+    font-family: 'EB Garamond', Garamond, serif;
+    color: var(--nord0);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 0.5ch;
+}
+
+.content h3 {
+    font-family: 'EB Garamond', Garamond, serif;
+    font-size: 34px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0.5ch;
+}
+
+.content p {
+    font-family: 'Nunito Sans', Helvetica, sans-serif;
+    font-size: 21px;
+    color: var(--nord0);
+    text-align: justify;
+}
+
+/* now specific classes and media queries */
 .content.home {
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
-    max-width: 75%;
 }
 
 .textcontent.home {
@@ -151,54 +147,9 @@ a {
     width: 100%;
 }
 
-.content.research,
-.content.teaching {
-    flex-direction: column;
-    max-width: 50%;
-}
-
-.textcontent.research,
-.textcontent.teaching {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.textcontent a:hover {
-    color: var(--nord10)
-}
-
-.content h2 {
-    font-family: 'EB Garamond', Garamond, serif;
-    color: var(--nord0);
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 600;
-    margin: 0;
-    margin-bottom: 0.5ch;
-}
-
-.content h3 {
-    font-family: 'EB Garamond', Garamond, serif;
-    font-style: italic;
-    text-align: center;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 0.5ch;
-}
-
-.content p {
-    font-family: 'Nunito Sans', Helvetica, sans-serif;
-    color: var(--nord0);
-    text-align: justify;
-    font-size: 1em;
-}
-
 @media (max-width: 800px) {
     .content.home {
-        flex-direction: column;
+        flex-flow: column nowrap;
     }
 
     .textcontent.home {
@@ -211,20 +162,33 @@ a {
     }
 }
 
-.footer {
-    font-size: 1em;
-    flex: 0;
-    background: var(--nord8);
-    justify-content: space-around;
+.content.research,
+.content.teaching {
+    flex-flow: column nowrap;
 }
 
-.footer div {
-    flex: 0;
+.textcontent.research,
+.textcontent.teaching {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 1em auto 0em;
+}
+
+.textcontent a:hover {
+    color: var(--nord10)
+}
+
+.footer {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 21px;
+    background: var(--nord8);
 }
 
 .social-link {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0px;
     font-weight: bold;
     color: var(--nord0);
 }
