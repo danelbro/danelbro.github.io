@@ -38,7 +38,7 @@ body {
 .header {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 0;
     min-width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -74,8 +74,8 @@ body {
     font-family: 'EB Garamond', Garamond, serif;
     font-size: 1em;
     text-align: center;
-    background: var(--nord10);
-    padding: 0.5em;
+    background: var(--nord8);
+    padding: 0.3em;
     border-radius: 0.75em;
     margin-bottom: auto;
     margin-left: auto;
@@ -115,32 +115,78 @@ a {
     transition: color 0.5s
 }
 
+.mainlink a {
+    text-decoration: none;
+}
+
 .mainlink a:hover {
-    color: var(--nord3)
+    color: var(--nord10)
 }
 
 .content {
-    gap: 50px;
     margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
     flex: 3;
     display: flex;
+}
+
+.content.home {
+    flex-flow: row nowrap;
     align-items: center;
+    justify-content: center;
     max-width: 75%;
 }
 
-.textcontent {
-    max-width: 75%;
+.textcontent.home {
+    margin-right: 2%;
+}
+
+.pic {
+    margin-left: 2%;
+}
+
+#face {
+    height: auto;
+    width: 100%;
+}
+
+.content.research,
+.content.teaching {
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.textcontent.research,
+.textcontent.teaching {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: auto;
-    flex: 2;
+    margin-right: auto;
 }
 
 .textcontent a:hover {
     color: var(--nord10)
 }
 
-.pic {
-    flex: 1 0;
-    margin-right: auto;
+.content h2 {
+    font-family: 'EB Garamond', Garamond, serif;
+    color: var(--nord0);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 0.5ch;
+}
+
+.content h3 {
+    font-family: 'EB Garamond', Garamond, serif;
+    font-style: italic;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 0.5ch;
 }
 
 .content p {
@@ -150,52 +196,43 @@ a {
     font-size: 1em;
 }
 
-#face {
-    height: auto;
-    width: 100%;
-}
-
 @media (max-width: 800px) {
-    .content {
-        margin-top: 10%;
-        margin-bottom: 10%;
-        flex-direction: column-reverse;
+    .content.home {
+        flex-direction: column;
     }
 
-    .textcontent {
+    .textcontent.home {
         margin-right: auto;
     }
 
     .pic {
-        max-width: 75%;
+        margin-right: auto;
         margin-left: auto;
     }
 }
 
 .footer {
-    font-family: 'EB Garamond', Garamond, serif;
-    font-size: 0.9em;
+    font-size: 1em;
     flex: 0;
-    padding: 0.5em;
-    background: var(--nord10);
-    border-top-left-radius: 0.75em;
-    border-top-right-radius: 0.75em;
+    background: var(--nord8);
+    justify-content: space-around;
 }
 
 .footer div {
-    flex: 1;
-    text-align: center;
+    flex: 0;
 }
 
 .social-link {
-    padding: 0.2em 1.5em;
-    border-radius: 0.75em;
-    font-weight: 700;
-    text-decoration: none;
     margin-top: auto;
     margin-bottom: auto;
+    font-weight: bold;
+    color: var(--nord0);
+}
+
+.social-link a {
+    text-decoration: none;
 }
 
 .social-link a:hover {
-    color: var(--nord3)
+    color: var(--nord10)
 }
