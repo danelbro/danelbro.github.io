@@ -187,10 +187,6 @@ a:hover.mainlink {
     background: var(--nord8);
 }
 
-.fa {
-    font-family: "FontAwesome";
-}
-
 .social-link {
     margin: auto 0px;
     font-weight: bold;
