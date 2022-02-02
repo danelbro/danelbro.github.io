@@ -139,12 +139,13 @@ a:hover.mainlink {
 }
 
 .pic {
-    margin-left: 2%;
+    display: flex;
+    justify-content: center;
 }
 
 #face {
     height: auto;
-    width: 100%;
+    width: 75%;
 }
 
 @media (max-width: 800px) {
