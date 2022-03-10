@@ -121,6 +121,7 @@ a:hover.mainlink {
     margin-bottom: 0.5ch;
 }
 
+.content li,
 .content p {
     font-family: 'Nunito Sans', Helvetica, sans-serif;
     font-size: 21px;
