@@ -169,7 +169,8 @@ a:hover.mainlink {
 }
 
 .textcontent.research,
-.textcontent.teaching {
+.textcontent.teaching
+.subhead {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
