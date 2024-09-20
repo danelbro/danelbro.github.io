@@ -169,12 +169,15 @@ a:hover.mainlink {
 }
 
 .textcontent.research,
-.textcontent.teaching
-.subhead {
+.textcontent.teaching {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     margin: 1em auto 0em;
+}
+
+.subhead {
+    text-align: center;
 }
 
 .textcontent a:hover {
