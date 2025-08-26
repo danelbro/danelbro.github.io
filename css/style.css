@@ -105,7 +105,7 @@ a:hover.mainlink {
     font-family: 'EB Garamond', Garamond, serif;
     color: var(--nord0);
     text-align: center;
-    font-size: 36px;
+    font-size: 26px;
     font-weight: 600;
     margin: 0;
     margin-bottom: 0.5ch;
@@ -113,7 +113,7 @@ a:hover.mainlink {
 
 .content h3 {
     font-family: 'EB Garamond', Garamond, serif;
-    font-size: 34px;
+    font-size: 24px;
     text-align: center;
     font-weight: 500;
     margin: 0;
@@ -123,7 +123,7 @@ a:hover.mainlink {
 .content li,
 .content p {
     font-family: 'Nunito Sans', Helvetica, sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     color: var(--nord0);
     text-align: justify;
 }
@@ -172,7 +172,7 @@ a:hover.mainlink {
 .textcontent.teaching {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: left;
     margin: 1em auto 0em;
 }
 
